@@ -123,3 +123,133 @@ velocidade_medica = 60.0
 temp_max = 35.5
 vel_med = 60
 
+#Definição e exemplos de inteiros em python3, não há limites para o tamanho do inteiro
+
+x = 5
+y = -10
+z = 1000000
+
+a = 10
+b = 3
+soma = a + b
+diferenca = a - b
+produto = a * b
+quociente = a / b #resulta em float
+quociente_inteiro = a // b
+resto = a % b
+potencia = a ** b
+
+print(f"Soma: {soma}")
+print(f"Diferenca: {diferenca}")
+print(f"Produto: {produto}")
+print(f"Quociente: {quociente}")
+print(f"Quociente inteiro: {quociente_inteiro}")
+print(f"Resto: {resto}")
+print(f"Potencia: {potencia}")
+
+
+# em python, inteiros tem precisão arbitrária. Isso significa que podem crescer até o limite da memória disponível
+# uma peculiaridade importante é a divisão
+#divisão normal sempre retorna um FLOAT
+print(10/3) # saída: 3.3333
+#DIVISÃO inteira retorna um int
+print(10//3) # saida: 3
+
+
+#NÚMEROS DE PONTO FLUTUANTE (FLOAT)
+#Float são numeros com componentes fracionários
+
+x = 3.14
+y = -0.001
+z = 2.5e-4 # notação científica
+
+# Operações com float
+a = 3.14
+b = 2.10
+
+soma = a + b
+diferenca = a - b
+produto = a * b
+quociente = a / b
+potencia = a ** b
+
+print(f"Soma: {soma}")
+print(f"Diferenca: {diferenca}")
+print(f"Produto: {produto}")
+print(f"Quociente: {quociente}")
+print(f"Potencia: {potencia}")
+
+#Precisão e Arredondamento
+#float têm precisao limitada e podem levar a resultados inesperados em comparações:
+print(0.1 + 0.2 == 0.3) # saída: false
+print(0.1 + 0.2) #saída: 0.30000000000004
+
+#para lidar com isso, utiliza-se a função round() ou o módulo decimal para cálculos que exigem precisão
+from decimal import Decimal
+a = Decimal ('0.1')
+b = Decimal ('0.2')
+print( a + b == Decimal ('0.3')) # saida: true
+
+#strings são sequências imutáveis de caracteres Unicode
+nome = "Angel"
+frase = 'Python e incrivel!'
+texto_longo = """"Este é um texto 
+que ocupa multiplas linhas."""
+
+#strings
+s1 = 'String com aspas simples'
+s2 = "String com aspas duplas"
+s3 = '''String com aspas triplas para
+multiplas
+linhas'''
+s4 = """"outra
+string 
+multilinha"""
+
+#operações básicas com strings
+a = "olá"
+b = "mundo"
+
+concatencao = a + " " + b
+repeticao = a*3, b*4
+
+print(concatencao) # saída olá mundo
+print(repeticao) #saida oláoláolá 3 vezes
+
+#strings também suportam indexação e fatiamento:
+s = "Python"
+print(s[0]) #saída: P
+print(s[1:4]) #saída: yth
+print (s[::-1]) #saída: nohtyp (INVERTER A STRING)
+
+#booleanos / representam valores de verdade lógica, true ou false
+is_python_fun = True
+is_coffee_cold = False
+
+x = 5
+y = 10
+print(x<y)# saida true
+print(x == y)# saida false
+print( x > 0 and y < 20) #saida true
+
+# função type() retorna o tipo do objeto
+
+x = 5
+y = 3.14
+z = "Hello"
+w = True
+
+print(type(x))
+print(type(y))
+print(type(z))
+print(type(w)) #saida: <class 'bool'>
+
+#conversão de tipos
+
+num_str = "42"
+num_int = int(num_str)
+num_float = float(num_str)
+
+print(num_int + 8)# saida 50
+print(num_float + 0.5) # saida 42.5
+
