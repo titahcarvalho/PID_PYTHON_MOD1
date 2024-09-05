@@ -1,3 +1,4 @@
+import math
 print("helllo, world")
 
 def calcular_area_retangulo(largura, altura):
@@ -252,4 +253,99 @@ num_float = float(num_str)
 
 print(num_int + 8)# saida 50
 print(num_float + 0.5) # saida 42.5
+
+#-------------------------------------------------------------------
+#OPERAÇÕES MATEMATICAS
+a = 10
+b = 3
+
+print (a+b) #adição: 13
+print (a-b) #subtração: 7
+print (a*b) #multiplicação: 30
+print (a/b) #divisão: 3.333333
+
+#Divisão inteira e modulo
+print(a//b) # divisão inteira : 3
+print(a%b) #modulo: 1 - resto da divisão
+
+#POTENCIAÇÃO E RAIZ QUADRADA
+print(a ** 2) #potenciação: 100
+print(math.sqrt(a)) #raiz quadrada: 3.1622776601682795
+
+#PRECEDENCIA DE OPERADORES
+print(2 + 3 * 4) #14
+print((2+3)*4) #20
+
+#OPERAÇÕES COM STRINGS
+str1 = "Hello"
+str2 = "Word"
+print(str1 + " "+ str2) # hello word
+
+#REPETIÇÃO
+print("Ha" * 3) #HaHaHa
+
+#INDEXAÇÃO E FATIAMENTO BASICOS
+s = "Python"
+print(s[0]) #P
+print(s[1:4]) # yth
+print(s[::-1]) # nohtyP (inverte a string)
+
+#IGUALDADE, DESIGUALDADE
+print( 5 == 5) #true
+print(5 != 6) #true
+
+#MAIOR QUE, MENOR QUE, MAIOR OU IGUAL, MENOR OU IGUAL
+
+print(5 > 3) # True
+print(5 < 3) # False
+print(5 >= 5) # True
+print(5 <= 4) # False
+
+#COMPARAÇÕES COM DIFERENTES TIPOS DE DADOS
+
+print(5 == 5.0) # True
+print("5" == 5) # False
+print(True == 1) # True
+print(False == 0) # True
+
+#OPERAÇÕES LOGICAS
+
+print(True and False)  # False
+print(True or False)  # True
+print(not True) # False
+
+#USO COM BOOLEANOS E OUTROS TIPOS DE DADOS
+print(5 and 3) #3
+print(0 or 2) #2
+print(not []) #true
+
+#conversão entre tipos de dados
+print(int("5")) #5
+print(float("3.14")) #3.14
+print(str(42)) #"42"
+print(bool(1)) #true
+
+#POSSIVEIS ERROS
+try:
+    print(int("3.14")) # ERRO: NÃO PODE CONVERTER FLOAT STRING PARA INT
+except ValueError as e:
+    print(f"Erro: {e}")
+
+print(int(3.14)) #3 (trunca o float)
+print(bool("")) #false (string vazia e considerada false)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
