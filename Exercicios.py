@@ -162,3 +162,4 @@ else:
 minutos = 1000
 divi = minutos // 60
 print(f"Em {minutos} minutos há {divi} horas")
+

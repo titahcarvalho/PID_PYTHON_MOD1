@@ -334,18 +334,75 @@ except ValueError as e:
 print(int(3.14)) #3 (trunca o float)
 print(bool("")) #false (string vazia e considerada false)
 
+#FUNÇÃO PRINT
+
+nome = "Angelica"
+idade = 30
+cidade = "Itabira"
+print("Olá, sou a", nome, "e tenho", idade,"anos e nasci na cidade de", cidade)
+
+#SEQUÊNCIA DE ESCAPE
+print('Linha 1\nLinha 2\n\tLinha 3 (com tabulação')
+print('Ele disse: \"Python é incrível"')
+
+#Paramêtros da função print
+print('Python', 'é', 'incrível', sep='-', end='!\n')
+print('Contagem:', 1, 2, 3, sep=',', end='...')
+
+#String com Aspas Triplas
+poema = """
+Duas estradas divergiam em um bosque amarelo, 
+E lamentando não poder seguir ambas 
+E ser um só viajante, por muito tempo fiquei parado
+E olheo para uma delas tão distante quanto pude
+Até onde se perdia na mata;
+"""
+print(poema)
+codigo = '''
+def saudacao(nome):
+    print(f"Olá, {nome}!"}
+    print('Bem-vindo ao Python!')
+'''
+print(codigo)
+
+#Formatção de Strings
+#F-strings (Python 3.6+)
+nome = 'Alice'
+idade = 30
+print(f'Meu nome é {nome} e tenho {idade} anos.')
+print(f'Daqui a 5 anos, terei {idade + 5} anos.')
 
 
+nome = 'Bob'
+idade = 25
+altura = 1.75
+print('Meu nome é {}, tenho {} anos e minha altura é {:.2f}m.'.
+    format(nome, idade, altura))
+
+#OBTENDO ENTRADA DO USUÁRIO
+nome = input("Qual é o seu nome?")
+print(f"Olá, {nome}! Bem-vindo ao Python")
+
+#CONVERTER ENTRADA PARA NUMEROS
+idade =  int(input('Quantos anos você tem?'))
+altura = float(input('Qual é a sua altura em metros?'))
+print(f"Você tem {idade} anos e {altura:.2f}m de altura.")
+print(f"Daqui a 10 anos, você terá {idade+10} anos.")
 
 
+#EXEMPLO PRÁTICO: CALCULADORA SIMPLES
+print("Calculadora Simples")
+num1 = float(input("Digite o primeiro número: "))
+num2 = float(input("Digite o segundo número: "))
+soma = num1 + num2
+subtracao = num1 - num2
+multiplicacao = num1*num2
+divisao = num1/num2 if num2 != 0 else "Erro: divisão por zero"
 
-
-
-
-
-
-
-
-
+print(f"\n Resultados")
+print(f"{num1} + {num2} = {soma}")
+print(f"{num1} - {num2} = {subtracao}")
+print(f"{num1} * {num2} = {multiplicacao}")
+print(f"{num1} / {num2} = {divisao}")
 
 
