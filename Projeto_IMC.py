@@ -79,6 +79,18 @@ print(f"Percentual da gorjeta:{percentual_gorjeta * 100:.0f}%")
 print(f"Valor da gorjeta:{gorjeta:.2f}")
 print(f"Valor total a ser pago:{total_apagar:.2f}")
 
+#-----------------------------------------------------------------------------------
+# PROJETO MÊS 1
+# CONVERSOR DE UNIDADE DE COMPRIMENTO
+menu = input("Escolha: \n1: Metros para centímetros \n2: Centímetros para metros \n3: Metros para polegadas \n4: Polegadas para metros \n5: Pés para metros \n6: Metros para pés:")
+entrada = float(input("Digite o valor que deseja converter:"))
 
-
-
+if( menu == 1):
+   saida = entrada * 100
+   print(f" {entrada}m equivale a {saida}cm.")
+elif( menu == 2):
+   saida = entrada / 100
+   print(f" {entrada}cm equivale a {saida}m.")
+elif (menu == 3):
+   saida = entrada / 100
+   print(f" {entrada}cm equivale a {saida}m.")
