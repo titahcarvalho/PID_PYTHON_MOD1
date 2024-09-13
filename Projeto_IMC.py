@@ -80,17 +80,29 @@ print(f"Valor da gorjeta:{gorjeta:.2f}")
 print(f"Valor total a ser pago:{total_apagar:.2f}")
 
 #-----------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------
 # PROJETO MÊS 1
 # CONVERSOR DE UNIDADE DE COMPRIMENTO
-menu = input("Escolha: \n1: Metros para centímetros \n2: Centímetros para metros \n3: Metros para polegadas \n4: Polegadas para metros \n5: Pés para metros \n6: Metros para pés:")
+menu = input("Escolha: \n1: Metros para centímetros \n2: Centímetros para metros \n3: Metros para polegadas \n4: Polegadas para metros \n5: Pés para metros \n6: Metros para pés\n")
 entrada = float(input("Digite o valor que deseja converter:"))
 
-if( menu == 1):
-   saida = entrada * 100
-   print(f" {entrada}m equivale a {saida}cm.")
-elif( menu == 2):
-   saida = entrada / 100
-   print(f" {entrada}cm equivale a {saida}m.")
-elif (menu == 3):
-   saida = entrada / 100
-   print(f" {entrada}cm equivale a {saida}m.")
+if menu == '1':
+    saida = entrada * 100  # (1m = 100cm)
+    print(f"{entrada}m equivale a {saida}cm.")
+elif menu == '2':
+    saida = entrada / 100  # (1cm = 0.01m)
+    print(f"{entrada}cm equivale a {saida}m.")
+elif menu == '3':
+    saida = entrada / 0.0254  # (1 polegada = 0.0254m)
+    print(f"{entrada}m equivale a {saida} polegadas.")
+elif menu == '4':
+    saida = entrada * 0.0254  # (1 polegada = 0.0254m)
+    print(f"{entrada} polegadas equivale a {saida}m.")
+elif menu == '5':
+    saida = entrada * 0.3048  # (1 pé = 0.3048m)
+    print(f"{entrada} pés equivale a {saida}m.")
+elif menu == '6':
+    saida = entrada / 0.3048  # (1 metro = 3.28084 pés)
+    print(f"{entrada}m equivale a {saida} pés.")
+else:
+    print("Opção inválida.")
