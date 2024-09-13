@@ -227,6 +227,56 @@ if ano % 4 == 0:
 else:
     print("O {ano} não é bissexto")
 
+    # 5. Crie um programa que simule um sistema de notas escolar, onde o usuario insere uma nota de 0 a 100 e o programa retorna o conceito correspondente (A, B, C, D ou F).
+    nota = float(input("Insira a nota:"))
+    if nota > 90:
+        print("A")
+    elif nota >= 80:
+        print("B")
+    elif nota >= 70:
+        print("C")
+    elif nota >= 60:
+        print("D")
+    else:
+        print("F")
+
+    # Desenvolva um programa que simule um caixa eletronico. O programa deve perguntar o valor do
+    # saque e informar quantas notas de cada valor serao fornecidas, considerando que ha notas de R100,R 50,
+    # R20eR 10.
+    valor = float(input("Digite um valor de saque:"))
+
+    nota100 = valor // 100
+    valor = valor % 100
+
+    nota50 = valor // 50
+    valor = valor % 50
+
+    nota20 = valor // 20
+    valor = valor % 20
+
+    nota10 = valor // 10
+    valor = valor % 10
+
+    nota5 = valor // 5
+    valor = valor % 5
+
+    moeda1 = valor // 1
+    valor = valor % 1
+
+    moeda50 = valor // 0.50
+    valor = valor % 0.5
+
+    print(f"As notas disponiveis para o saque são:")
+    print(f"Nota de $100: {nota100}")
+    print(f"Nota de $50: {nota50}")
+    print(f"Nota de $20: {nota20}")
+    print(f"Nota de $10: {nota10}")
+    print(f"Nota de $5: {nota5}")
+    print(f"Moeda de $1: {moeda1}")
+    print(f"Moeda de $0,50: {moeda50}")
+
+
+
 
 
 
