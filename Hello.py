@@ -406,3 +406,13 @@ print(f"{num1} * {num2} = {multiplicacao}")
 print(f"{num1} / {num2} = {divisao}")
 
 
+
+
+
+
+
+
+
+
+
+
