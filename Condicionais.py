@@ -275,6 +275,106 @@ else:
     print(f"Moeda de $1: {moeda1}")
     print(f"Moeda de $0,50: {moeda50}")
 
+# Escreva um programa que pe¸ca um n´ umero ao usu´ario e informe se ele ´ epositivo, negativo ou zero.
+numero = float(input("Digite qualquer número que pertença ao conjunto dos números reais"))
+if numer > 0:
+    print(f"O {numero} é positivo.")
+elif numero == 0:
+    print(f"O {numero} é zero.")
+elif numero < 0:
+    print(f"O {numero} é negativo.")
+
+#Crie um programa que solicite a idade do usu´ario e informe se ele ´ e maiorde idade ou menor de idade.
+idade = int(input("Digite a sua idade:"))
+if idade > 18:
+    print("Você é de menor")
+elif idade <= 18:
+    printf(f"Você é de maior.")
+
+# Fa¸ ca um programa que pe¸ca dois n´umeros e informe qual ´ e o maior.
+num1 = int(input("Digite o primeiro número:"))
+num2 = int(input("Digite o segundo número:"))
+
+if num1 > num2:
+    print(f"{num1} é maior")
+else:
+    print(f"{num2} é maior")
+
+#Escreva um programa que pe¸ ca um n´ umero de 1 a 7 ao usu´ario e informe
+ #o dia da semana correspondente (1- Domingo, 2- Segunda, etc.). Se o
+ #n´ umero n˜ao estiver nesse intervalo, informe que ´ e inv´alido.
+
+dia = (input("Digite um número de 1 a 7 para retornar o dia da semana:"))
+if dia == '1':
+            print("Segunda-feira")
+elif dia == '2':
+            print("Terça-feira")
+elif dia == '3':
+            print("Quarta-feira")
+elif dia == '4':
+            print("Quinta-feira")
+elif dia == '5':
+            print("Sexta-feira")
+elif dia == '6':
+            print("Sábado")
+elif dia == '7':
+            print("Domingo")
+else:
+            print("Dia inválido")
+
+#Crie um programa que solicite a nota de um aluno (de 0 a 10) e informe
+ #se ele foi aprovado (nota ¿= 7), est´a em recupera¸c˜ao (nota entre 5 e 6.9)
+ #ou foi reprovado (nota ¡ 5).
+nota = float(input("Digite a nota do aluno de 0 a 10:"))
+if nota >= 7:
+         print("Aluno aprovado")
+elif (nota < 6.9) and (nota >= 5):
+         print("Aluno de recuperação")
+elif nota < 5:
+         print("Aluno reprovado")
+
+
+# Fa¸ ca um programa que pe¸ ca um n´ umero inteiro e determine se ele ´ e parou ´ ımpar.
+numero = int(input("Digite um número:"))
+
+if numero %2 == 0:
+     print("Esse número é par")
+elif numero % 2 != 0:
+     print("Esse número é ímpar")
+
+#Escreva um programa que solicite o ano atual e o ano de nascimento deuma pessoa, e informe se ela pode votar (16 anos ou mais) ou n˜ao.
+
+ano_nascimento = int(input("Digite o ano de seu nascimento:"))
+ano_atual = int(input("Digite o ano atual:"))
+
+if ano_atual - ano_nascimento >= 16:
+    print("Você pode votar")
+elif ano_atual-ano_nascimento < 16:
+    print("Você não pode votar")
+
+#Crie um programa que pe¸ca trˆ es n´ umeros ao usu´ario e os imprima em ordem crescente.
+numero1 = int(input("Digite: \nNúmero 1: "))
+numero2 = int(input("Número 2: "))
+numero3 = int(input("Número 3: "))
+
+#if numero1 > numero2 and numero1 > numero3:
+#    if numero2 > numero3 or numero2 < numero1:
+#        print(f"{numero3}, {numero2}, {numero1}")
+#elif numero2 > numero1 and numero2 > numero3:
+#    if numero1 > numero3:
+#        print(f"{numero3}, {numero1}, {numero2}")
+#elif numero3 > numero2 and numero3 > numero1:
+ #   if numero2 > numero1:
+  #      print(f"{numero1}, {numero2}, {numero3}")
+
+# Colocando os números em uma lista
+numeros = [numero1, numero2, numero3]
+
+# Ordenando a lista em ordem crescente
+numeros.sort()
+
+# Imprimindo os números ordenados
+print(f"Os números em ordem crescente são: {numeros[0]}, {numeros[1]}, {numeros[2]}")
 
 
 
