@@ -376,7 +376,13 @@ numeros.sort()
 # Imprimindo os números ordenados
 print(f"Os números em ordem crescente são: {numeros[0]}, {numeros[1]}, {numeros[2]}")
 
-
-
-
-
+## Fa¸ ca um programa que solicite o sal´ario de um funcion´ario e calcule o valor
+ #do aumento. Para sal´arios superiores a R$ 1250,00, calcule um aumento
+ #de 10%. Para os inferiores ou iguais, o aumento ´ e de 15%.
+salario = float(input("Digite o salario do funcionario:"))
+if salario > 1250:
+    aumento = salario+(salario*0.10)
+    print(f"Reajuste de 10%, salario novo: R${aumento:.2f}.")
+elif salario <= 1250:
+    aumento = salario+(salario*0.15)
+    print(f"Reajuste de 15%, salario novo: R${aumento:.2f}.")
