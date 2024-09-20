@@ -87,3 +87,10 @@ lista = {'Abacate': 2,'Limão': 4, 'Alho':8, 'Cebola':9}
 
 for item, quant in lista.items():
     print(f"{item}: {quant}")
+
+#Escreva um código que converta uma lista de strings em uma lista de inteiros, utilizando um laço for.
+#imprimir numeros ímpares de 1 a 20
+
+for numero in range(1,21):
+    if numero % 2 == 1:
+         print(numero)s
