@@ -88,9 +88,125 @@ lista = {'Abacate': 2,'Limão': 4, 'Alho':8, 'Cebola':9}
 for item, quant in lista.items():
     print(f"{item}: {quant}")
 
-#Escreva um código que converta uma lista de strings em uma lista de inteiros, utilizando um laço for.
-#imprimir numeros ímpares de 1 a 20
+# Escreva um código que converta uma lista de strings em uma lista de inteiros, utilizando um laço for.
+# imprimir numeros ímpares de 1 a 20
 
-for numero in range(1,21):
+for numero in range(1, 21):
     if numero % 2 == 1:
-         print(numero)s
+        print(numero)
+
+# Usandoomóduloitertools, crie umiterador infinito que gere números
+# pares e imprima os primeiros 10 números gerados
+
+frutas = ['maça', 'banana', 'uva']
+iterador = iter(frutas)
+
+print(next(iterador))
+print(next(iterador))
+print(next(iterador))
+
+# usando for ...
+frutas = ['maça', 'banana', 'uva']
+for frutas in frutas:
+    print(frutas)
+
+import itertools
+
+interador_infinito = itertools.count(start=0, step=2)
+
+for pares in range(10):
+    print(next(interador_infinito))
+
+# Imprimir números ímpares de 1 a 20.
+
+for impares in range(1, 21):
+    if impares % 2 == 1:
+        print(impares)
+
+# imprimir lista de frutas:
+
+frutas = ['abacate', 'maça', 'melão']
+for fruta in frutas:
+    print(fruta)
+
+# Contagem at´e um n´ umero fornecido pelo usu´ario.
+
+numero = int(input("Digite um numero:"))
+
+while numero > 0:
+    print(numero)
+    numero -= 1
+
+# Imprimir pa´ ıses e capitais.
+paises = {"Argentina": "Buenos Aires", "Brasil": "Brasilia", "Canadá": "Ottawa"}
+
+for pais, capital in paises.items():
+    print(f"{pais}: {capital}")
+# Contagem regressiva de 10 a 1.
+
+numero = 10
+while numero > 0:
+    print(numero)
+    numero -= 1
+# -------------------------------------
+for num in range(10, 0, -1):
+    print(num)
+
+# 6. Calcular soma dos n´ umeros em uma lista.
+
+numero = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+soma = 0
+for num in numero:
+    soma += num
+print(f"{numero}")
+print(f"A soma é {soma}")
+
+# Imprimir letras de uma palavra até encontrar ’a’:
+
+palavra = input("Digite uma palavra:")
+i = 0
+while i < len(palavra):
+    if palavra[i] == 'a':
+        break
+    print(palavra[i])
+    i += 1
+
+# Imprimir a tabuada do 7:
+for i in range(1, 11):
+    print(f"7 X {i} = {7 * i}")
+
+# Criar nova lista com números pares:
+numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+pares = [num for num in numeros if num % 2 == 0]
+print(pares)
+
+# Gerar sequência Fibonacci até um número maior que 100:
+a, b = 0, 1
+while a <= 100:
+    print(a)
+    a, b = b, a + b
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
