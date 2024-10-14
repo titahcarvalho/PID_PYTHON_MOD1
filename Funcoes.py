@@ -175,6 +175,46 @@ resultado = Fibonacci(5)
 print("Os 5 primeiros numeros da sequencia Fibonacci são:", resultado)
 
 
+# Exercício 9: Números Primos Desenvolva uma função chamada eh_primo que receba um número e
+# retorne True se o número for primo e False caso contrário. Teste a função com alguns números.
+def eh_primo(numero):
+    if numero < 2:
+        return False
+    for i in range(2, int(numero ** 0.5) + 1):
+        if numero % i == 0:
+            return False
+        return True
+
+
+# Testando a função
+resultado = eh_primo(21)
+print("É primo?:", resultado)
+
+
+# Exercício 10: Reverso de uma String Crie uma função chamada reverso que receba uma string e
+# retorne a string invertida. Teste a função com diferentes strings.
+
+
+def reverso(string):
+    rerversoda_palavra = ""
+    for char in string:
+        rerversoda_palavra = char + rerversoda_palavra
+    return rerversoda_palavra
+
+
+# Tester
+resultado = reverso("PYTHON")
+print("string reversa:", resultado)
+
+
+
+
+
+
+
+
+
+
 
 
 
