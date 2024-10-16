@@ -227,6 +227,169 @@ print(c())  # imprime 2
 print(c())  # imprime 3
 
 
+# EXERCICIO 4
+# 4. Escreva uma função chamada calcula_media que aceite um número variável de argumentos e
+# retorne a média desses números. Demonstre o uso dessa função com diferentes quantidades de
+# argumentos.
+
+def calcula_media(*args):
+    if len(args) == 0:
+        return 0
+    total = 0
+    for num in args:
+        total += num
+    return total / len(args)
+
+
+print(calcula_media(1, 2, 3))
+print(calcula_media(2, 5, 8, 6, 8))
+
+
+# EXERCICIO 5
+
+# 5. Complete a função abaixo para que ela aceite um número variável de argumentos de palavras-chave
+# e imprima cada par chave-valor em uma nova linha:
+#  def imprime_info(**kwargs):
+#       Seu código aqui
+
+def imprime_info(**kwargs):
+    for chave, valor in kwargs.items():
+        print(f"{chave}:{valor}")
+
+
+imprime_info(fruta="maça", legumes="cenoura", valor=13.85)
+
+
+# EXERCICIO 6
+# 6. Crie uma função chamada combina_listas que aceite um número variável de listas como argu
+# mentos e retorne uma única lista contendo todos os elementos das listas fornecidas, na ordem em
+# que foram passadas.
+def combina_listas(*args):
+    resultado = []
+    for seq in args:
+        for item in seq:
+            resultado.append(item)
+    return resultado
+
+
+seq1 = (1, 2, 3)
+seq2 = (4, 5, 6)
+seq3 = (7, 8, 9)
+
+print(combina_listas(seq3, seq2, seq1))
+
+
+# EXERCICIO 7
+# Explique o que há de errado com a seguinte definição de função e como corrigi-la:
+def adiciona_item(item, sequencia=None):
+    if sequencia is None:
+        sequencia = []
+    sequencia.append(item)
+    return sequencia
+
+
+# Escreva uma função chamada aplica_desconto que aceite o preço de um produto e uma porcent
+# agem de desconto (padrão 10%). A função deve retornar o preço com o desconto aplicado.
+
+def aplicar_desconto(preco, desconto=10):
+    return preco * (1 - desconto / 100)
+
+
+print(aplicar_desconto(100))
+print(aplicar_desconto(100, 20))
+
+
+# EXERCIOCIO 9
+# Crie uma função decoradora chamada registra_chamadas que conte e imprima o número de vezes
+# que a função decorada foi chamada. Aplique este decorador a uma função simples e demonstre seuuso.
+
+def registra_chamadas(func):
+    def wrapper(*args, **kwargs):
+        wrapper.count += 1
+        print(f"A função {func.__name__} foi chamada {wrapper.count} vezes")
+        return func(*args, **kwargs)
+
+    wrapper.count = 0
+    return wrapper
+
+
+@registra_chamadas
+def saudacao(nome):
+    return f"Olá, {nome}!"
+
+
+print(saudacao("Alice"))
+
+print(saudacao("Ana"))
+
+print(saudacao("Aline"))
+
+
+# EXERCICO 10
+
+# Escreva uma função chamada ordena_por_chave que aceite uma lista de dicionários e o nome de
+# uma chave. A função deve retornar a lista ordenada com base nos valores da chave especificada. Se
+# a chave não existir em algum dicionário, esse dicionário deve ser colocado no final da lista ordenada.
+def ordena_por_chave(sequencia, chave):
+    def chave_ordenacao(item):
+        if chave in item:
+            return item[chave]
+        return float('inf')
+
+    return sorted(sequencia, key=chave_ordenacao)
+
+
+seq = [
+    {"nome": "Alice", "idade": 30},
+    {"nome": "Bob", "idade": 25},
+    {"nome": "Charlie"},
+    {"nome": "David", "idade": 35},
+]
+print(ordena_por_chave(seq, "idade"))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
